@@ -1,0 +1,108 @@
+@font-face{
+    font-family: fontAliens;
+    src: url(fontAliens.ttf);
+}
+
+@font-face{
+    font-family: fontBrandon;
+    src: url(fontBrandon.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.todo-container {
+    display: flex;
+}
+
+.menu-container {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: auto;
+    padding: 0px 40px;
+}
+
+.name-container {
+    font-family: fontAliens;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: rgb(99, 99, 99);
+    padding-top: 70px;
+}
+
+.nav-container {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 300px;
+    clear: both;
+}
+
+.ul-container{
+    list-style: none;
+}
+
+.ul-container li{
+    padding-bottom: 10px;
+}
+
+.ul-container li a {
+    font-family: fontBrandon, sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    color: rgb(55, 55, 55);
+    text-decoration: none;
+}
+
+.ul-container li a:hover {
+    color: rgb(186, 218, 85);
+}
+
+/*#####################################################################*/
+
+.body {
+    height: auto;
+    width: 100%;
+    padding-top: 70px;
+    padding-left: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    width: 50%;
+}
+
+.gallery .photo-container {
+    position: relative;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 2vh;
+    grid-auto-flow: dense;
+}
+
+.gallery .photo-container .img-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery .photo-container .img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .photo-container .img-container:first-child {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.gallery .photo-container .img-container:nth-child(2n+3) {
+    grid-row-start: span 2;
+}
