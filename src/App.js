@@ -5,10 +5,12 @@ import Poster from "./components/Poster";
 import PictureBooks from "./components/PictureBooks";
 import BitsAndPieces from "./components/BitsAndPieces";
 import About from "./components/About";
-import NavBar from "./components/NavBar";
+import PageNotFound from "./components/PageNotFound";
+import NavBar from "./components/useful/NavBar.jsx";
 import './styles/style.css';
 
 function App() {
+
     return (
         <BrowserRouter>
             <NavBar/>
@@ -20,6 +22,8 @@ function App() {
                     <Route component={PictureBooks} path='/picturebooks' />
                     <Route component={BitsAndPieces} path='/bitsandpieces' />
                     <Route component={About} path='/about' />
+                    <Route component={PageNotFound} />
+
                 </Switch>
             </div>
         </BrowserRouter>
